@@ -10,6 +10,7 @@ services:
     environment:
       - DB_HOST=postgres
       - DB_PASSWORD=abc123
+      - API_HOST=
     volumes:
       - ./:/code
     ports:
@@ -17,7 +18,7 @@ services:
 
 
   postgres:
-    image: postgres:9.6
+    image: postgres:15
     environment:
       - POSTGRES_USER=allocation
       - POSTGRES_PASSWORD=abc123
